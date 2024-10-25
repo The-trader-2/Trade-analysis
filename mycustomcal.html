@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Analysis for 365 Days</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1e;
+            color: #eaeaea;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            text-align: center;
+            color: #f1c40f;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #inputContainer {
+            text-align: center;
+            margin: 20px;
+        }
+        #startButton {
+            padding: 12px 24px; /* Slightly larger button */
+            font-size: 18px; /* Increased font size */
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="number"] {
+            padding: 16px; /* Increased padding for better visibility */
+            font-size: 18px; /* Increased font size */
+            width: 300px; /* Increased width for visibility */
+            margin: 10px; /* Added margin for spacing between inputs */
+            border: 1px solid #3a3a3c; /* Consistent border style */
+            border-radius: 5px; /* Rounded corners for aesthetics */
+            background-color: #2c2c2e; /* Match background color */
+            color: #eaeaea; /* Match text color */
+        }
+        table {
+            border: 1px solid #3a3a3c;
+            border-radius: 8px;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 240px;
+            background-color: #2c2c2e;
+            color: #eaeaea;
+        }
+        th, td {
+            border: 1px solid #3a3a3c;
+            padding: 6px;
+            text-align: center;
+        }
+        th {
+            background-color: #007bff;
+            color: #ffffff;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .highlight {
+            background-color: #4caf50;
+            color: #ffffff;
+        }
+        .table-container {
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .tables-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Quotex Trading Analysis Enter the Required Details Below</h2>
+<div id="inputContainer">
+    <input type="number" id="initialAmountInput" placeholder="Enter Initial Amount >= 50">
+    <input type="number" id="resultTradePercentageInput" placeholder="Result Trade % example 88">
+    <input type="number" id="totalTradesTakenInput" placeholder="Total Trades Per Day example 2">
+    <input type="number" id="daysInput" placeholder="Number of Days example 90 Days">
+    <button id="startButton" onclick="startCalculation()">Start Analysis</button>
+</div>
+<div class="tables-wrapper" id="tablesWrapper"></div>
+
+<!-- Link to External JavaScript File -->
+<script src="chartmycustomcal.js"></script>
+
+</body>
+</html>
